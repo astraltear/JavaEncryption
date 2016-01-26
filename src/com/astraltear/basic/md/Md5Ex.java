@@ -5,20 +5,32 @@ import java.nio.charset.Charset;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+import org.apache.commons.codec.CharEncoding;
 import org.apache.commons.codec.binary.Base64;
 
 public class Md5Ex {
 
 	public static void main(String[] args) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-		String input="ajlcjalkewjprnkl2@#$3jfklejvle";
+		String input="djkr@#$@#$#232424324)#$U@#%#KEEK%#rjwlkrwejrkl";
 		
-		String firstEncode =  Md5Ex.toHexString(Md5Ex.md5Encode(input)).toString().toUpperCase();
-		System.out.println(firstEncode );
+		System.out.println(toHexString(Base64.encodeBase64(md5Encode(input))).toString().toUpperCase());
+		System.out.println("6443326D6354613261453753694143454D5A66786A673D3D");
 		
-		byte [] secondEncode = Base64.encodeBase64(firstEncode.getBytes());
+//		String firstEncode =  toHexString(md5Encode(input)).toString().toUpperCase();
+//		System.out.println(firstEncode );
 		
-		System.out.println(new String(secondEncode,Charset.defaultCharset()));
+//		Integer integer =  Integer.valueOf(firstEncode, 16);
+		
+//		System.out.println(bytes);
+		
+//		byte [] secondEncode = Base64.encodeBase64("00C9A77A8A5F0B92622789CBB9DE6B71".getBytes());
+//		byte [] secondEncode = Base64.encodeBase64(md5Encode(input));
+		
+		
+//		System.out.println(secondEncode);
+//		System.out.println(new String(secondEncode));
 	}
+
 
 	public static byte[] md5Encode(String input) throws NoSuchAlgorithmException {
 		MessageDigest messageDigest = MessageDigest.getInstance("MD5");
