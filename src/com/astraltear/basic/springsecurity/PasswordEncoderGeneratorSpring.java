@@ -37,9 +37,8 @@ public class PasswordEncoderGeneratorSpring {
 			System.out.println("result==>"+bCryptEncoder.matches(password, bCryptPassword));
 			
 			
-			String standarPassword = standardPasswordEncoder.encode(password);
-			
-			System.out.println("bCryptPassword["+bCryptPassword+"]standarPassword["+standarPassword+"]BCrypt.hashpw["+BCrypt.hashpw(password, salt)+"]");
+//			String standarPassword = standardPasswordEncoder.encode(password);
+//			System.out.println("bCryptPassword["+bCryptPassword+"]standarPassword["+standarPassword+"]BCrypt.hashpw["+BCrypt.hashpw(password, salt)+"]");
 			i++;
 		}
 	}
